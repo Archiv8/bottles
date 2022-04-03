@@ -5,21 +5,19 @@
 # repository root directory, see https://github.com/koalaman/shellcheck/wiki
 # and https://archiv8.github.io for further information.
 # shellcheck disable=SC2034,SC2154
-# shellcheck disable=SC2034,SC2154
-# ToDo: Add files: User documentation
-# ToDo: Add files: Tooling
-# FixMe: Namcap warnings and errors
+# [ToDo]: Add files: User documentation
+# [ToDo]: Add files: Tooling
+# [FixMe]: Namcap warnings and errors
 
-# Maintainer: Francesco Masala <mail@francescomasala.me>
-# Contributor:  Francesco Masala <mail@francescomasala.me>
+# Maintainer: Ross Clark <archiv8@artisteducator.com>
 # Contributor: Ross Clark <archiv8@artisteducator.com>
 
 _relsuffix="trento"
-_relver="4"
+_relver="1"
 
 
 pkgname="bottles"
-pkgver=2022.2.28
+pkgver=2022.3.28
 pkgrel=1
 pkgdesc="Easily manage wine and proton prefix"
 arch=("any")
@@ -64,8 +62,8 @@ makedepends=(
   "ninja"
   )
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}-${_relsuffix}-${_relver}.tar.gz")
-sha256sums=(
-  "fb54db4114b0abbe8376af4008b6ccd06c41eb2e5d64e372c75f5d2f8e24deff"
+sha512sums=(
+  "3150b7d0398d3a6807a5eaa1e45575bdaef4afda650865ab0a51f3260a3a0f9241aca052f9c87be0be858697acde383698b20a3065d66858bb706792836e7ca4"
   )
 
 build() {
