@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Created from the original AUR package by Francesco Masala, "mail@francescomasala.me"
+
 # Disable various shellcheck rules that produce false positives in this file.
 # Repository rules should be added to the .shellcheckrc file located in the
 # repository root directory, see https://github.com/koalaman/shellcheck/wiki
@@ -13,11 +15,11 @@
 # Contributor: Ross Clark <archiv8@artisteducator.com>
 
 _relsuffix="trento"
-_relver="1"
+_relver=""
 
 
 pkgname="bottles"
-pkgver=2022.3.28
+pkgver=2022.4.14
 pkgrel=1
 pkgdesc="Easily manage wine and proton prefix"
 arch=("any")
@@ -61,9 +63,9 @@ makedepends=(
   "meson"
   "ninja"
   )
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}-${_relsuffix}-${_relver}.tar.gz")
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}-${_relsuffix}.tar.gz")
 sha512sums=(
-  "3150b7d0398d3a6807a5eaa1e45575bdaef4afda650865ab0a51f3260a3a0f9241aca052f9c87be0be858697acde383698b20a3065d66858bb706792836e7ca4"
+  "5e29678aab700ae55e3200dc42a11b26a16e7c7030e389903d482f670fdaa95a80180c5c51549e11bdccfd3ca6f5f1bf5c7ee9864a4d697bb568cf99714b1e6a"
   )
 
 build() {
