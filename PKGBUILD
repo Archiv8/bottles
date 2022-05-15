@@ -15,14 +15,14 @@
 # Contributor: Ross Clark <archiv8@artisteducator.com>
 
 _relsuffix="trento"
-_relver=""
-
 
 pkgname="bottles"
-pkgver=2022.4.14
+pkgver=2022.5.14
 pkgrel=1
 pkgdesc="Easily manage wine and proton prefix"
-arch=("any")
+arch=(
+  "any"
+)
 url="https://github.com/bottlesdevs/Bottles"
 license=("GPL3")
 depends=(
@@ -47,7 +47,7 @@ depends=(
 
   # Archiv8 packages
   "patool"
-  )
+)
 optdepends=(
   # Official Arch Linux repositories
   "gamemode"
@@ -57,28 +57,36 @@ optdepends=(
   "vkd3d"
   "vulkan-icd-loader"
 
-  )
+)
 makedepends=(
   # Official Arch Linux repositories
   "meson"
   "ninja"
-  )
-source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}-${_relsuffix}.tar.gz")
+)
+source=(
+  "${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}-${_relsuffix}.tar.gz"
+)
 sha512sums=(
-  "5e29678aab700ae55e3200dc42a11b26a16e7c7030e389903d482f670fdaa95a80180c5c51549e11bdccfd3ca6f5f1bf5c7ee9864a4d697bb568cf99714b1e6a"
-  )
+  "83947ccb69258170c4fbf3594decb6658e8893ed5e4a80fd8cc05319592b89ee984bd0c8d443694dfe7040dbe21f8cd325e6cd50f0d3bd5422fd2a18cfd1fe92"
+)
 
 build() {
+
   if [[ -d Bottles ]]; then
-        rm -rf Bottles
-  fi;
+    rm -rf Bottles
+  fi
+
   mv Bottles*/ Bottles/
   cd "Bottles" || exit
+
   meson --prefix="/usr" build
+
   ninja -C build
 }
 
 package() {
+
   cd "Bottles" || exit
+
   DESTDIR="${pkgdir}" ninja -C build install
 }
