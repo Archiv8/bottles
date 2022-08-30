@@ -11,13 +11,13 @@
 # [ToDo]: Add files: Tooling
 # [FixMe]: Namcap warnings and errors
 
-# Maintainer: Ross Clark <archiv8@artisteducator.com>
-# Contributor: Ross Clark <archiv8@artisteducator.com>
+# Maintainer: Ross Clark <https://github.com/orgs/Archiv8/bottles/discussions>
+# Contributor: Ross Clark <https://github.com/orgs/Archiv8/bottles/discussions>
 
-_relsuffix="trento"
+_relsuffix="brescia-2"
 
 pkgname="bottles"
-pkgver=2022.5.14
+pkgver=2022.8.28
 pkgrel=1
 pkgdesc="Easily manage wine and proton prefix"
 arch=(
@@ -67,7 +67,7 @@ source=(
   "${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}-${_relsuffix}.tar.gz"
 )
 sha512sums=(
-  "83947ccb69258170c4fbf3594decb6658e8893ed5e4a80fd8cc05319592b89ee984bd0c8d443694dfe7040dbe21f8cd325e6cd50f0d3bd5422fd2a18cfd1fe92"
+  "711b697eaeb85da827ba9f24ee39f7e309ccdf41e8be633bc0b03715eaf5a16fda4994d59b2915db456a05c87ffa2077d1d71906305011e41000d702326992ab"
 )
 
 build() {
